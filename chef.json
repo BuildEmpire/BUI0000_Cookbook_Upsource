@@ -1,0 +1,9 @@
+{
+  "run_list": [
+    "cookbook_upsource"
+  ],
+  "cookbook_upsource": {
+    "upsource": {
+    }
+  }
+}
