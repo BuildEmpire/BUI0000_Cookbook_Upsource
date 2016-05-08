@@ -13,7 +13,7 @@ memory_options = node['cookbook_upsource']['upsource']['memory_options']
 
 # Calculate some variables
 install_dir = "#{install_root_dir}/#{upsource_version}"
-shell_script_path = "#{install_dir}/Upsource/bin/upsource.sh"
+shell_script_path = "#{install_dir}/bin/upsource.sh"
 
 # Create Upsource Service
 template '/etc/init/upsource.conf' do
