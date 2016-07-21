@@ -4,16 +4,8 @@
 #
 
 # Decipher the locations
-archive_directory = Chef::Config[:file_cache_path]
-upsource_version = node['cookbook_upsource']['upsource']['version']
-install_root_dir = node['cookbook_upsource']['upsource']['install_root_dir']
-data_directory = node['cookbook_upsource']['upsource']['data_dir']
-backup_directory = node['cookbook_upsource']['upsource']['backup_dir']
 memory_options = node['cookbook_upsource']['upsource']['memory_options']
-
-# Calculate some variables
-install_dir = "#{install_root_dir}/#{upsource_version}"
-shell_script_path = "#{install_dir}/bin/upsource.sh"
+shell_script_path = node['cookbook_upsource']['upsource']['shell_script_path']
 
 # Create Upsource Service
 template '/etc/init/upsource.conf' do
